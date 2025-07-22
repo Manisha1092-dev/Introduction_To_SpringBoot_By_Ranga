@@ -10,8 +10,9 @@ The challenges faced in application development before Spring Boot:
 3.  Non-Functional Requirements: The importance of manually implementing logging, error handling, and monitoring, which added complexity to the project setup.
 
 4.  Time Consumption: Setting up a project could take several days, with ongoing maintenance requiring significant additional work.
-
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Q:  What were the two major types of configurations required in a Spring project before Spring Boot?
+
 A:  The configurations required in a Spring project before Spring Boot:
 
 XML Configuration: Before Spring Boot, developers had to set up a web.xml file for defining servlets and application context configurations, which could become complex and cumbersome. This meant detailing every configuration manually.
@@ -19,8 +20,9 @@ XML Configuration: Before Spring Boot, developers had to set up a web.xml file f
 Java Configuration: Additionally, Java-based configurations were also required to set up aspects like component scanning, view resolvers, and data sources. Developers often needed to create multiple configuration classes and utilize annotations to set up the environment.
 
 These two types of configurations made the process of developing Spring applications more time-consuming and complicated.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q:  Explain how springboot achieve automatic configuration with example in details?
 
-Q:  Explain how springboot achieve automatic configuration with example in details
 A:  Spring Boot’s automatic configuration is one of its most powerful and magical features. It dramatically simplifies the development of Spring-based applications by minimizing the amount of configuration you need to do manually. Let's break it down clearly and thoroughly.
 
 🌱 What Is Automatic Configuration?
@@ -118,3 +120,4 @@ Disable specific auto configs using:
 
 java
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
