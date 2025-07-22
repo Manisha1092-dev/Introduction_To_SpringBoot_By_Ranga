@@ -18,6 +18,7 @@ A:  The configurations required in a Spring project before Spring Boot:
 XML Configuration: Before Spring Boot, developers had to set up a web.xml file for defining servlets and application context configurations, which could become complex and cumbersome. This meant detailing every configuration manually.
 
 Java Configuration: Additionally, Java-based configurations were also required to set up aspects like component scanning, view resolvers, and data sources. Developers often needed to create multiple configuration classes and utilize annotations to set up the environment.
+
 These two types of configurations made the process of developing Spring applications more time-consuming and complicated.
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -38,6 +39,7 @@ Here's how Spring Boot achieves automatic configuration internally:
 This annotation is typically present in your main class via @SpringBootApplication, which is a combo of three annotations:
 
 java
+
 @SpringBootApplication
 // Internally includes:
 @EnableAutoConfiguration
@@ -68,6 +70,7 @@ Let’s say you want to build a simple web app with embedded Tomcat and Spring M
 In pom.xml:
 
 xml
+
 <dependency>
 <groupId>org.springframework.boot</groupId>
 <artifactId>spring-boot-starter-web</artifactId>
@@ -88,6 +91,7 @@ Default MVC configuration (view resolvers, message converters, etc.)
 
 🎯 Step 2: Create the Application Class
 java
+
 @SpringBootApplication
 public class MyWebApp {
 public static void main(String[] args) {
@@ -100,6 +104,7 @@ You don’t have to manually configure DispatcherServlet or Tomcat. It just work
 You can create a controller like this and start serving web pages:
 
 java
+
 @RestController
 public class HelloController {
 @GetMapping("/hello")
@@ -117,7 +122,9 @@ You can override it by defining your own beans.
 Use @ConditionalOnMissingBean to allow fallback logic.
 
 Disable specific auto configs using:
+
 java
+
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
