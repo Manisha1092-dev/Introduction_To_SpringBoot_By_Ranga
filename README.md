@@ -82,20 +82,19 @@ In pom.xml:
 </dependency>
 Spring Boot sees this and detects:
 
-You want a web server
+>  You want a web server
 
-You want Spring MVC
+>  You want Spring MVC
 
 So it automatically configures:
 
-Embedded Tomcat
+>  Embedded Tomcat
 
-DispatcherServlet
+>  DispatcherServlet
 
-Default MVC configuration (view resolvers, message converters, etc.)
+>  Default MVC configuration (view resolvers, message converters, etc.)
 
 🎯 Step 2: Create the Application Class
-java
 
 @SpringBootApplication
 
